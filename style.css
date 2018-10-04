@@ -1,0 +1,193 @@
+.navDefault{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: #4a4a4f;
+    width:100%;
+    transition-property:background-color, width;
+    transition-duration:3s;
+    transition-timing-function:ease-in-out;
+}
+
+button{
+    border:none;
+    background-color: #0997d3;
+    width:150px;
+    height:50px;
+    color:#fff;
+    cursor:pointer;
+    text-transform: uppercase;
+    transition-property:width;
+    transition-timing-function:ease-in-out;
+    transition-duration:3s;
+}
+button #first{
+       display:none;
+       
+   }
+   button #second{
+       display:block;
+       
+   }
+.dropdownMenu{
+    list-style: none;
+    margin:0;
+    padding:0px;
+    position:absolute;
+    left:0;
+    right:0;
+    width:150px;
+    box-shadow: -21px 10px 29px 0px rgba(69,69,69,1);
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    z-index: -1;
+    
+}
+.dropdownLink{
+    text-decoration: none;
+    text-align: center;
+    display:block;
+    /*width:150px;*/
+    background-color: #f9f9f9;
+    /*padding:10px 5px;*/
+    color:#4a4a4f;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    
+    /*transition*/
+    transition:background-color .5s ease-in-out, color .5s ease-in-out;
+    
+}
+
+.dropdownLink{
+    width:150px;
+    transition:width 3s ease-in-out;
+}
+.dropdownLink:hover{
+    background-color:grey;
+    color:#fff;
+}
+.dropdown{
+    width:150px;
+    position: relative;
+}
+.dropdown:hover button{
+    background-color: #018ec5;
+    
+    
+}
+.dropdown:hover .dropdownMenu{
+    transform: translateY(1%);
+    
+}
+
+@media(max-width:767px){
+   .navDefault{
+       transition-property:background-color, width;
+       transition-duration:3s;
+       background-color:transparent;
+       width:20%;
+       /*position:static;*/
+       float:left;
+       /*width:40px;*/
+       /*//content: "";*/
+       
+   }
+   button{
+       /*visibility:hidden;*/
+       transition-property:width, opacity;
+       transition-duration:3s;
+       width:60px;
+       
+       
+   }
+   button #first{
+       display:block;
+       
+   }
+   button #second{
+       display:none;
+       
+   }
+   /*hacky bodge to get around the fact that css isnt designed for dynamic content*/
+   /* button:after {*/
+   /*   content:"Menu"; */
+   /*   visibility: visible;*/
+   /*   display: block;*/
+   /*   position: fixed;*/
+   /*     top:0;*/
+   /*     left:0;*/
+   /*     right:0;*/
+   /*    background-color: #0997d3;*/
+   /*     width:60px;*/
+   /*     height:50px;*/
+   /*     color:#fff;*/
+        /*vertical-align:middle;*/
+   /* }*/
+   
+   .dropdownMenu{
+    list-style: none;
+    margin:0;
+    padding:0px;
+    position:absolute;
+    left:0;
+    right:0;
+    width:60px;
+    box-shadow: -21px 10px 29px 0px rgba(69,69,69,1);
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    z-index: -1;
+    
+}
+.dropdownLink{
+    text-decoration: none;
+    text-align: center;
+    display:block;
+    background-color: #f9f9f9;
+    padding:10px 5px;
+    color:#4a4a4f;
+    width: 150px;
+    /*transition-property: width;*/
+    /*transition-duration: 0.5s;*/
+    /*transition-timing-function: ease-in-out;*/
+    
+    /*transition*/
+    transition:background-color .5s ease-in-out, color .5s ease-in-out;
+    
+}
+.dropdownLink:hover{
+    background-color:grey;
+    color:#fff;
+}
+.dropdown{
+    width:60px;
+    position: relative;
+}
+.dropdown:hover button{
+    background-color: #018ec5;
+    
+    
+}
+.dropdown:hover .dropdownMenu{
+    transform: translateY(1%);
+    
+}
+.dropdownItem{
+    width:0px;
+}
+.dropdownLink{
+    width:60px;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.dropdownLink:hover{
+    width:100px;
+    
+    
+    }
+}
+
